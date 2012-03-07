@@ -19,7 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -71,10 +71,10 @@ svg:not(:root) {
 /* Base Structure and Layout
 -----------------------------------------------------------------------------*/
 
-html { 
-	font-size: 100%; 
-	-webkit-text-size-adjust: 100%; 
-	-ms-text-size-adjust: 100%; 
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	overflow-y:scroll;
 	overflow-x:hidden;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -93,16 +93,16 @@ img.alignleft { margin: 0 9px 9px 0; display: inline; }
 .layout { overflow: hidden;}
 .gutter { margin-right:20px; }
 
-.one-fifth		{ width: 176px; }
-.quarters		{ width: 225px; }
-.one-third		{ width: 306px; }
-.two-fifths		{ width: 372px; }
-.half			{ width: 470px; }
-.three-fifths	{ width: 568px; }
-.two-thirds		{ width: 633px; }
-.three-quarters	{ width: 715px; }
-.four-fifths	{ width: 764px; }
-.full			{ width: 960px; }
+.one-fifth       { width: 176px; }
+.quarters        { width: 225px; }
+.one-third       { width: 306px; }
+.two-fifths      { width: 372px; }
+.half            { width: 470px; }
+.three-fifths    { width: 568px; }
+.two-thirds      { width: 633px; }
+.three-quarters  { width: 715px; }
+.four-fifths     { width: 764px; }
+.full            { width: 960px; }
 
 figure { margin: 0; }
 
@@ -123,7 +123,7 @@ body {
 	line-height: 1.3;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
  	margin-bottom:9px;
  	font-weight: bold;
  	display: block;
@@ -169,7 +169,7 @@ sub { bottom: -0.25em; }
 form { margin: 0; }
 
 input:focus, button:focus, textarea:focus, select:focus {
-	outline: none;	
+	outline: none;
 }
 
 fieldset {
@@ -199,7 +199,7 @@ button, input {
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
-	*overflow: visible; 
+	*overflow: visible;
 }
 
 button[disabled], input[disabled] {
@@ -225,7 +225,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
-	border: 0; 
+	border: 0;
 	padding: 0;
 }
 

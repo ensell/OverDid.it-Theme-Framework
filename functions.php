@@ -77,20 +77,20 @@ function overdid_init()
 {
     wp_register_script(
             'overdid-admin', get_bloginfo('template_url') .
-            '/includes/javascript/overdid-admin.js', array('jquery', 'media-upload',
+            '/js/overdid-admin.js', array('jquery', 'media-upload',
         'thickbox')
     );
     wp_register_script(
             'overdid-colorpicker', get_bloginfo('template_url') .
-            '/includes/javascript/colorpicker.js', array('jquery')
+            '/js/colorpicker.js', array('jquery')
     );
     wp_register_style(
             'overdid-meta-style', get_bloginfo('template_url') .
-            '/includes/css/meta-style.css'
+            '/css/meta-style.css'
     );
     wp_register_style(
             'overdid-color', get_bloginfo('template_url') .
-            '/includes/css/colorpicker.css'
+            '/css/colorpicker.css'
     );
 
     if (isset($_GET['post'])) {
@@ -229,7 +229,7 @@ function overdid_stylesheet_import()
 {
     ?>
     <link rel="stylesheet"
-          href="<?php bloginfo('template_url'); ?>/includes/css/options-style.css"
+          href="<?php bloginfo('template_url'); ?>/css/options-style.css"
           type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css"
           type="text/css" media="screen" />
@@ -262,7 +262,7 @@ function overdid_stylesheet_import()
 
   add_action('wp_footer', 'overdid_footer_additions');
 
- 
+
   /**
    * Collect Post Meta Fields
    *
@@ -444,7 +444,7 @@ $matches[0]
 
 /**
  * Outputs and formats the business hours
- * 
+ *
  * $short = true outputs full days of the week. false outputs abbreviated days of the week.
  * $before specifies what comes after each item. Defaults to a <br />
  * $after specifices what comes before each item. Defaults to a null string.
@@ -460,7 +460,7 @@ function overdid_business_hours($short = true, $before = "", $after = "<br />", 
 	$i = 0;
 	foreach ($business_hours as $days) :
 		if($days[0] !== 'Closed' && $days[1] !== 'Closed') :
-			
+
 			$days[0] = preg_replace("/:00/", "", $days[0]);
 			$days[0] = preg_replace("/ /", "", $days[0]);
 			$days[0] = strtolower($days[0]);
@@ -472,7 +472,7 @@ function overdid_business_hours($short = true, $before = "", $after = "<br />", 
 				echo $before . $days_of_week[$i] . ": " . $days[0] . " - " . $days[1] . $after;
 			else
 				echo $before . $short_days_of_week[$i] . ": " . $days[0] . " - " . $days[1] . $after;
-		
+
 		endif; // if day does not equal Closed
 
 		$i++;
