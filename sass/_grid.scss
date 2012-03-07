@@ -1,0 +1,21 @@
+img.alignright { margin: 0 0 9px 9px; display: inline; }
+.aligncenter, img.aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; }
+img.alignleft { margin: 0 9px 9px 0; display: inline; }
+.alignleft { float:left; }
+.alignright { float:right; }
+.clear { margin:0; padding:0; clear:both; }
+.ie7-clear { display: none; }
+.ie7 .ie7-clear { margin:0; padding:0; clear:both; }
+.layout { overflow: hidden;}
+.gutter { margin-right:20px; }
+
+.one-fifth       { width: 176px; }
+.quarters        { width: 225px; }
+.one-third       { width: 306px; }
+.two-fifths      { width: 372px; }
+.half            { width: 470px; }
+.three-fifths    { width: 568px; }
+.two-thirds      { width: 633px; }
+.three-quarters  { width: 715px; }
+.four-fifths     { width: 764px; }
+.full            { width: 960px; }
