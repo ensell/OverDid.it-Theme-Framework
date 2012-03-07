@@ -6,6 +6,8 @@
  **/
 
 get_header();
+$meta = overdid_get_meta($post->ID);
+$columns = new overdid_column($meta);
 ?>
 
 <div id="main" class="alignright three-quarters">
@@ -33,12 +35,10 @@ get_header();
 
 	rewind_posts();
 
-	/* Run the loop for the archives page to output the posts.
-	 * If you want to overload this in a child theme then include a file
-	 * called loop-archives.php and that will be used instead.
-	*/
-	get_template_part('loop', 'archive');?>
+	while ( have_posts() ) : the_post(); ?>
 
+
+	<?php endwhile; ?>
 </div>
 
 <?php

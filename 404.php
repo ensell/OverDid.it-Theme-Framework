@@ -7,14 +7,13 @@
  **/
 
 get_header();
-
+$meta = overdid_get_meta($post->ID);
+$columns = new overdid_column($meta);
 ?>
+<div id="main">
+	<h2>Error 404 - Not Found</h2>
 
-		<div id="main">
-			<h2>Error 404 - Not Found</h2>
-
-		</div>
-
+</div>
 <?php
 get_sidebar();
 get_footer();

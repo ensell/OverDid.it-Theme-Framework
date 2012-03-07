@@ -7,18 +7,11 @@
 
 get_header();
 $meta = overdid_get_meta($post->ID);
+$columns = new overdid_column($meta);
 ?>
 <div id="main" class="alignright three-quarters">
-    <?php
-    /* Run the loop to output the posts.
-     * If you want to overload this in a child theme then include a file
-     * called loop-index.php and that will be used instead.
-     */
-     get_template_part('loop', 'single');
-    ?>
 
 </div>
-
 <?php
 get_sidebar();
 get_footer();
