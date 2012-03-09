@@ -13,7 +13,7 @@
 <!--[if IE 8]>
 <html class="ie8" <?php language_attributes(); ?> xmlns:fb="http://www.facebook.com/2008/fbml">
 <![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]>-->
+<!--[if gt IE 8]><!-->
 <html <?php language_attributes(); ?> xmlns:fb="http://www.facebook.com/2008/fbml">
 <!--<![endif]-->
 	<head>
@@ -29,7 +29,7 @@
 			// add stylesheet links from functions.php
 			overdid_stylesheet_import();
 			?>
-			
+
 			<!--[if lt IE 9]>
 			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 			<![endif]-->
