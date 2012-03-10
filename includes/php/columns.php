@@ -24,7 +24,7 @@ class overdid_column
      * Display header for column
      * @param string $num - The meta number to use
      */
-    function header( $num ) 
+    function header( $num )
     {
         return $this->_data[ 'content' . $num . '_header' ];
     }
@@ -33,7 +33,7 @@ class overdid_column
      * Display Sub Header for Column
      * @param string $num - The meta number to use
      */
-    function sub_header( $num ) 
+    function sub_header( $num )
     {
         return $this->_data[ 'content' . $num . '_sub_head' ];
     }
@@ -41,6 +41,7 @@ class overdid_column
     /**
      * Display the image for the column
      * @param string $num - The meta number to use
+     * @param string $classes - optional CSS classes
      */
     function image( $num, $classes = "" )
     {
@@ -56,12 +57,12 @@ class overdid_column
 
         return $return;
     }
-    
+
     function image_link( $num )
-    {      
+    {
         return $this->_data[ 'content' . $num . '_image' ];
     }
-    
+
     /**
      * Display the column comment
      * @param string $num - The meta number to use

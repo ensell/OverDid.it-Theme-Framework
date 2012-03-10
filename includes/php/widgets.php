@@ -9,23 +9,23 @@
 /**
  * Add Custom Widgets for use
  **/
-add_action('widgets_init', 'adc_load_widgets');
+add_action('widgets_init', 'ovd_load_widgets');
 
-function adc_load_widgets()
+function ovd_load_widgets()
 {
-	register_widget('adc_menu_widget');
+	register_widget('ovd_menu_widget');
 }
 
-class adc_menu_widget extends WP_Widget
+class ovd_menu_widget extends WP_Widget
 {
 
-    function adc_menu_widget()
+    function ovd_menu_widget()
     {
         $widgetOps = array(
-            'classname' => 'adc_menu',
+            'classname' => 'ovd_menu',
             'description' => 'This widget extends the menu widget functionality'
         );
-		$this->WP_Widget('adc_menu', 'Adcuda Custom Menu', $widgetOps);
+		$this->WP_Widget('ovd_menu', 'Overdid Custom Menu', $widgetOps);
 	}
 
 	function widget($args, $instance)
@@ -33,9 +33,9 @@ class adc_menu_widget extends WP_Widget
         extract($args);
 
 		// Get menu
-		$adcMenu = wp_get_nav_menu_object($instance['adc_menu']);
+		$ovdMenu = wp_get_nav_menu_object($instance['ovd_menu']);
 
-		if (!$adcMenu)
+		if (!$ovdMenu)
 			return;
 
         $instance['title'] = apply_filters(
@@ -51,7 +51,7 @@ class adc_menu_widget extends WP_Widget
             echo $before_title . "<a href='" . get_permalink($link) . "'>" .
                 $instance['title'] . "</a>" . $after_title;
 
-		wp_nav_menu(array('fallback_cb' => '', 'menu' => $adcMenu ));
+		wp_nav_menu(array('fallback_cb' => '', 'menu' => $ovdMenu ));
 
 		echo $after_widget;
 	}
@@ -60,7 +60,7 @@ class adc_menu_widget extends WP_Widget
 	{
         $instance['title'] = strip_tags(stripslashes($newInstance['title']));
         $instance['link'] = strip_tags(stripslashes($newInstance['link']));
-		$instance['adc_menu'] = (int) $newInstance['adc_menu'];
+		$instance['ovd_menu'] = (int) $newInstance['ovd_menu'];
 		return $instance;
 	}
 
@@ -68,7 +68,7 @@ class adc_menu_widget extends WP_Widget
 	{
         $title      = isset($instance['title']) ? $instance['title'] : '';
         $link       = isset($instance['link']) ? $instance['link'] : '';
-		$adcMenu   = isset($instance['adc_menu']) ? $instance['adc_menu'] : '';
+		$ovdMenu   = isset($instance['ovd_menu']) ? $instance['ovd_menu'] : '';
 		$menus      = get_terms('nav_menu', array('hide_empty' => false));
 
 		// If no menus exists, direct the user to go and create some.
@@ -106,14 +106,14 @@ class adc_menu_widget extends WP_Widget
 			?>
         </p>
 		<p>
-			<label for="<?php echo $this->get_field_id('adc_menu'); ?>">
+			<label for="<?php echo $this->get_field_id('ovd_menu'); ?>">
 				Select Menu:
 			</label>
-            <select id="<?php echo $this->get_field_id('adc_menu'); ?>"
-            	name="<?php echo $this->get_field_name('adc_menu'); ?>">
+            <select id="<?php echo $this->get_field_id('ovd_menu'); ?>"
+            	name="<?php echo $this->get_field_name('ovd_menu'); ?>">
 		    <?php
 			foreach ( $menus as $menu ) {
-				$selected = $adcMenu == $menu->term_id ?
+				$selected = $ovdMenu == $menu->term_id ?
 					' selected="selected"' : '';
                 echo '<option' . $selected . ' value="' .
                     $menu->term_id . '">' . $menu->name . '</option>';
