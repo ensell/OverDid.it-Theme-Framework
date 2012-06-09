@@ -67,15 +67,18 @@ class overdid_column
      * Display the column comment
      * @param string $num - The meta number to use
      */
-    function content( $num )
-    {
-        return $this->_data[ 'content' . $num . '_content' ];
-    }
+	function content( $num )
+	{
+		return $this->_data[ 'content' . $num . '_content' ];
+	}
 
-    function link( $num )
-    {
-        return get_permalink( $this->_data[ 'content' . $num . '_link' ] );
-    }
+	function link( $num )
+	{
+		if( $this->_data[ 'content' . $num . '_link' ] !== "" )
+			return get_permalink( $this->_data[ 'content' . $num . '_link' ] );
+		else
+			return $this->_data[ 'content' . $num . '_link_get' ];
+	}
 
     /**
      *  Function:   convert_number

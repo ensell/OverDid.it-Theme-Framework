@@ -442,17 +442,19 @@ $matches[0]
 
 
 
+
 /**
- * Outputs and formats the business hours
+ * Displays the hours the business is open.
+ * @param  boolean $short        True/False for Short/Long days of the week. Default is True (Short)
+ * @param  string  $before       Text before the day. Default is "".
+ * @param  string  $after        Text after the day. Default is a line break.
+ * @param  boolean $combine_days Whether to combine the days if the times are the same. Does not work right now. Defaults to false.
+ * @return void                  None.
  *
- * $short = true outputs full days of the week. false outputs abbreviated days of the week.
- * $before specifies what comes after each item. Defaults to a <br />
- * $after specifices what comes before each item. Defaults to a null string.
- * $combine_days will combine days that have the same open times. Ex. Thurs: 10am - 8pm / Fri-Sat: 10am - 6pm. Does not work as of now.
- *
- *
- */
+*/
 function overdid_business_hours($short = true, $before = "", $after = "<br />", $combine_days = false) {
+
+	// TODO: Make combine_days work.
 	$business_hours = get_option('overdid-business-hours');
 	$days_of_week = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
 	$short_days_of_week = array('Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun');
