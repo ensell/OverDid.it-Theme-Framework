@@ -109,7 +109,7 @@ figure { margin: 0; }
 /* Links
 -----------------------------------------------------------------------------*/
 
-a { color: blue; text-decoration: none; }
+a { text-decoration: none; }
 a:focus { outline: thin dotted; }
 a:hover { text-decoration: underline; }
 
