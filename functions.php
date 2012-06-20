@@ -229,6 +229,7 @@ function overdid_stylesheet_import() {
 	?>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" />
 	<script src="<?php bloginfo('template_url');?>/js/prefixfree.min.js"></script>
+	<?php
 }
 
   /**
