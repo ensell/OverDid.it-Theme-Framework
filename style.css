@@ -39,8 +39,6 @@ table {
 	border-spacing: 0;
 }
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 img {
@@ -215,8 +213,6 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="search"] {
 	-webkit-appearance: textfield;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
