@@ -1078,7 +1078,7 @@ function overdid_build_css($options)
         }
 
         //open file and write to css file
-        $fileOpen = fopen(TEMPLATEPATH . "/includes/css/options-style.css", "w");
+        $fileOpen = fopen(TEMPLATEPATH . "/options-style.css", "w");
         fwrite($fileOpen, $content);
         fclose($fileOpen);
     }
