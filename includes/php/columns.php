@@ -79,6 +79,10 @@ class overdid_column
 		else
 			return $this->_data[ 'content' . $num . '_link_get' ];
 	}
+	function link_text( $num )
+	{
+		return $this->_data[ 'content' . $num . '_link_text' ];
+	}
 
     /**
      *  Function:   convert_number
